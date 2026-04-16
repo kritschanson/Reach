@@ -2920,7 +2920,7 @@ function App() {
   const currentAssessmentName = assessmentNameOverride || (nameMap && nameMap[rawAssessmentName2]) || rawAssessmentName2;
 
   useEffect(() => {
-    setAssessmentNameOverride(null);
+    if (!isSnapshot) setAssessmentNameOverride(null);
   }, [rawAssessmentName2]);
 
   useEffect(() => {
